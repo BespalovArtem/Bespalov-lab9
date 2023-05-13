@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "sort.h"
 
-void getLine(char *str, const int size);
+void GetLine(char *str, const int size);
 
 int main(void)
 {
@@ -33,7 +33,7 @@ int main(void)
 				scanf("%f", &item._key);
 				scanf("%c", &tmpCh);
 				printf("Введите Строку: ");
-				getLine(item._str, sizeof(item._str));
+				GetLine(item._str, sizeof(item._str));
 
 				if (udtPush(&udt, item))
 					printf("Элемент с ключом %f и строкой '%s' добавлен успешно\n", item._key, item._str);
@@ -98,7 +98,7 @@ int main(void)
 	return 0;
 }
 
-void getLine(char *str, const int size)
+void GetLine(char *str, const int size)
 {
 	int cnt = 0, ch;
 
