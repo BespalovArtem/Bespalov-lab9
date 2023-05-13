@@ -1,6 +1,6 @@
 #include "udt.h"
 
-void udtCreate(Udt *udt, const int capacity)
+void UdtCreate(Udt *udt, const int capacity)
 {
 	int i;
 	UDT_TYPE item;
@@ -20,7 +20,7 @@ void udtCreate(Udt *udt, const int capacity)
 	udt->_size = 0;
 }
 
-int udtPush(Udt *udt, const UDT_TYPE value)
+int UdtPush(Udt *udt, const UDT_TYPE value)
 {
 	if (udt->_size == udt->_capacity)
 		return 0;
@@ -30,7 +30,7 @@ int udtPush(Udt *udt, const UDT_TYPE value)
 	return 1;
 }
 
-void udtPop(Udt *udt)
+void UdtPop(Udt *udt)
 {
 	if (udt->_size == 0)
 		return;
@@ -38,22 +38,22 @@ void udtPop(Udt *udt)
 	udt->_size--;
 }
 
-UDT_TYPE udtTop(const Udt *udt)
+UDT_TYPE UdtTop(const Udt *udt)
 {
 	return udt->_data[udt->_size - 1];
 }
 
-int udtSize(const Udt *udt)
+int UdtSize(const Udt *udt)
 {
 	return udt->_size;
 }
 
-int udtEmpty(const Udt *udt)
+int UdtEmpty(const Udt *udt)
 {
 	return udt->_size == 0;
 }
 
-void udtPrint(Udt *udt)
+void UdtPrint(Udt *udt)
 {
 	int i;
 	Item item;
@@ -62,7 +62,7 @@ void udtPrint(Udt *udt)
 	printf("| Номер |    Ключ    |            Строка            |\n");
 	printf("+-------+------------+------------------------------+\n");
 
-	for (i = 0; i < udtSize(udt); i++)
+	for (i = 0; i < UdtSize(udt); i++)
 	{
 		item = udt->_data[i];
 
@@ -72,7 +72,7 @@ void udtPrint(Udt *udt)
 	printf("+-------+------------+------------------------------+\n");
 }
 
-void udtDestroy(Udt *udt)
+void UdtDestroy(Udt *udt)
 {
 	if (udt->_data != NULL)
 	{
