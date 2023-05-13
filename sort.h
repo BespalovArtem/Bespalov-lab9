@@ -3,8 +3,8 @@
 
 #include "udt.h"
 
-void udtMergeSort(Udt *udt);
-void udtPartition(Udt *udt, Udt *udt1, Udt *udt2);
-void udtMerge(Udt *udt, Udt *udt1, Udt *udt2);
+void UdtMergeSort(Udt *udt);
+void UdtPartition(Udt *udt, Udt *udt1, Udt *udt2);
+void UdtMerge(Udt *udt, Udt *udt1, Udt *udt2);
 
 #endif
